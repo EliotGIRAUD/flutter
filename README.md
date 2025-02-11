@@ -1,16 +1,19 @@
-# backsinge
+📘 Quiz Poissons 🐠
+Une application Flutter interactive proposant un quiz sur les poissons.
 
-A new Flutter project.
+🚀 Fonctionnalités
+📸 Affichage d'une image par question
+✅ Vérification des réponses avec une explication
+🏆 Affichage du score à la fin
+🛠️ Installation
 
-## Getting Started
+Clone ce repo :
+git clone https://github.com/ton-repo.git
 
-This project is a starting point for a Flutter application.
+Installe les dépendances :
+flutter pub get
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Lance l'application :
+  flutter run
+  
+👨‍💻 Développé par [Eliot GIRAUD]
