@@ -180,7 +180,6 @@ class _Ex4ScreenState extends State<Ex4Screen> {
                     counter = 0;
                   });
                 },
-
                 child: Text(
                   "Rejouer",
                   style: TextStyle(
