@@ -81,6 +81,8 @@ flutter:
     - lib/assets/poissonelectrique.jpg
     - lib/assets/requin.jpg
     - lib/assets/volant.jpg
+    - lib/assets/excited-so.gif
+    - lib/assets/elon.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

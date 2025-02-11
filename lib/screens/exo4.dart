@@ -83,19 +83,37 @@ List<Question> questions = [
   )
 ];
 
-AlertDialog customAlertDialog(BuildContext context, Question question) {
-  return AlertDialog(
-    title: const Text("Explication :"),
-    content: Text(question.explanation),
-    actions: [
-      TextButton(
-        onPressed: () {
-          Navigator.of(context).pop();
-        },
-        child: const Text("Fermer"),
-      ),
-    ],
-  );
+AlertDialog customAlertDialog(BuildContext context, Question question, bool answer) {
+  if (question.isTrue && answer == true || !question.isTrue && answer == false) {
+    return AlertDialog(
+      title: const Text("Bien joué ! Explication :"),
+      content: Text(question.explanation),
+      actions: [
+        TextButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+          child: const Text("Fermer", style: TextStyle(fontSize: 18, color: Colors.white)),
+        ),
+      ],
+    );
+  }
+  else {
+    return AlertDialog(
+      title: const Text("Dommage ! Explication :"),
+      content: Text(question.explanation),
+      actions: [
+        TextButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+          child: const Text("Fermer", style: TextStyle(fontSize: 18, color: Colors.white)),
+        ),
+      ],
+    );
+  }
 }
 
 Future<void> showCustomDialog({required Widget dialog, required BuildContext context, bool barrierDismissible = true}) async {
@@ -123,24 +141,36 @@ class _Ex4ScreenState extends State<Ex4Screen> {
     }
     setState(() {
       showCustomDialog(
-        dialog: customAlertDialog(context, questions[currentQuestionIndex]),
+        dialog: customAlertDialog(context, questions[currentQuestionIndex], answer), // Correction ici
         context: context,
       );
       currentQuestionIndex++;
     });
   }
 
+
   @override
   Widget build(BuildContext context) {
     if (currentQuestionIndex >= questions.length) {
       return Scaffold(
-        appBar: AppBar(title: const Text("Résultat")),
+        appBar: AppBar(title: Text("Résultat")),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text("Score : $counter / ${questions.length}", style: const TextStyle(fontSize: 24)),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 20.0),
+              ),
+              Image(image: AssetImage(counter > 5 ? 'lib/assets/elon.jpg' : 'lib/assets/excited-so.gif')),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 20.0),
+              ),
               Text(counter > 5 ? "Jamais vue un cerveau aussi gros !" : "T'es mauvais Jack !"),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 20.0),
+
+              ),
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
@@ -149,7 +179,7 @@ class _Ex4ScreenState extends State<Ex4Screen> {
                     counter = 0;
                   });
                 },
-                child: const Text("Rejouer"),
+                child: Text("Rejouer"),
               ),
             ],
           ),
@@ -160,11 +190,15 @@ class _Ex4ScreenState extends State<Ex4Screen> {
     Question currentQuestion = questions[currentQuestionIndex];
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Quiz sur les poissons")),
+      appBar: AppBar(title: Text("Quiz sur les poissons")),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20.0),
         child: Column(
           children: [
+            Text(
+                "Score : $counter / ${questions.length}",
+                style: const TextStyle(fontSize: 24)
+            ),
             Container(
               width: 440,
               height: 240,
@@ -188,14 +222,14 @@ class _Ex4ScreenState extends State<Ex4Screen> {
             const SizedBox(height: 50),
             ElevatedButton(
               onPressed: () => answerQuestion(true),
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
-              child: const Text("Vrai", style: TextStyle(fontSize: 18, color: Colors.white)),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+              child: Text("Vrai", style: TextStyle(fontSize: 18, color: Colors.white)),
             ),
             const SizedBox(height: 15),
             ElevatedButton(
               onPressed: () => answerQuestion(false),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
-              child: const Text("Faux", style: TextStyle(fontSize: 18, color: Colors.white)),
+              child: Text("Faux", style: TextStyle(fontSize: 18, color: Colors.white)),
             ),
           ],
         ),
