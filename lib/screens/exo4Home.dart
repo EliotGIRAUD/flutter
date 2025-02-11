@@ -59,7 +59,15 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => Ex4Screen()),
                 );
               },
-              child: Text("Commencer le Quiz !"),
+              child: Text(
+                "Commencer le Quiz !",
+                style: TextStyle(
+                  fontSize: 18, color: Colors.white
+                )
+              ),
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue
+              ),
             ),
           ]
         )
