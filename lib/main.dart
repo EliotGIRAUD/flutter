@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './screens/exo1.dart';
 import './screens/exo2.dart';
 import './screens/exo3.dart';
-import './screens/exo4.dart';
+import './screens/exo4Home.dart';
 
 void main() {
   runApp(const MainApp());
@@ -15,7 +15,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Ex4Screen(),
+      home: HomePage(),
     );
   }
 }
+

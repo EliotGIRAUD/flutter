@@ -205,10 +205,10 @@ class Ex2Screen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(15),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.black.withValues (),  // Couleur de l'ombre
-                                spreadRadius: 2,  // Propagation de l'ombre
-                                blurRadius: 7,    // Flou de l'ombre
-                                offset: Offset(0, 3),  // Décalage de l'ombre
+                                color: Colors.black.withValues (),
+                                spreadRadius: 2,
+                                blurRadius: 7,
+                                offset: Offset(0, 3),
                               ),
                             ],
                             image: const DecorationImage(

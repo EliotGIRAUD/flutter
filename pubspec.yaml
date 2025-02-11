@@ -70,6 +70,18 @@ flutter:
     - lib/assets/lunette.jpg
     - lib/assets/soleil.jpg
     - lib/assets/venère.jpg
+    - lib/assets/cligne.jpg
+    - lib/assets/clown.jpg
+    - lib/assets/dodo.jpg
+    - lib/assets/douleur.jpg
+    - lib/assets/esturgeon.jpg
+    - lib/assets/memoire.jpg
+    - lib/assets/pattes.jpg
+    - lib/assets/petit.jpg
+    - lib/assets/poissonelectrique.jpg
+    - lib/assets/requin.jpg
+    - lib/assets/volant.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
