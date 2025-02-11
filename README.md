@@ -1,5 +1,6 @@
 📘 Quiz Poissons 🐠
 Une application Flutter interactive proposant un quiz sur les poissons.
+Ce projet est aussi constitué de 3 autres exercices cependant seul le quiz est affiché.
 
 🚀 Fonctionnalités
 📸 Affichage d'une image par question
