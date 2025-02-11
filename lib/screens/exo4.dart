@@ -154,6 +154,7 @@ class _Ex4ScreenState extends State<Ex4Screen> {
     if (currentQuestionIndex >= questions.length) {
       return Scaffold(
         appBar: AppBar(title: Text("Résultat")),
+        backgroundColor: Colors.blueAccent,
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -179,7 +180,16 @@ class _Ex4ScreenState extends State<Ex4Screen> {
                     counter = 0;
                   });
                 },
-                child: Text("Rejouer"),
+
+                child: Text(
+                  "Rejouer",
+                  style: TextStyle(
+                      fontSize: 18, color: Colors.white
+                  )
+                ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.indigo
+                ),
               ),
             ],
           ),
@@ -191,6 +201,7 @@ class _Ex4ScreenState extends State<Ex4Screen> {
 
     return Scaffold(
       appBar: AppBar(title: Text("Quiz sur les poissons")),
+      backgroundColor: Colors.blueAccent,
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20.0),
         child: Column(

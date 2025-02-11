@@ -13,6 +13,7 @@ class HomePage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
+      backgroundColor: Colors.blueAccent,
       body: Center(
         child: Column(
           children: <Widget>[
@@ -66,7 +67,7 @@ class HomePage extends StatelessWidget {
                 )
               ),
               style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue
+                  backgroundColor: Colors.indigo
               ),
             ),
           ]
