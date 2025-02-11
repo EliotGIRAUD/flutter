@@ -1,5 +1,6 @@
 📘 Quiz Poissons 🐠
 Une application Flutter interactive proposant un quiz sur les poissons.
+Ce projet est aussi constitué de 3 autres exercices cependant seul le quiz est affiché.
 
 🚀 Fonctionnalités
 📸 Affichage d'une image par question
@@ -8,7 +9,7 @@ Une application Flutter interactive proposant un quiz sur les poissons.
 🛠️ Installation
 
 Clone ce repo :
-git clone https://github.com/ton-repo.git
+git clone https://github.com/EliotGIRAUD/flutter.git
 
 Installe les dépendances :
 flutter pub get
@@ -16,4 +17,4 @@ flutter pub get
 Lance l'application :
   flutter run
   
-👨‍💻 Développé par [Eliot GIRAUD]
+👨‍💻 Développé par Eliot GIRAUD
